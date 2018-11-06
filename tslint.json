@@ -1,0 +1,7 @@
+{
+  "extends": ["@springworks/tslint-config"],
+  "rules": {
+    "no-unused-variable": false,
+    "variable-name": false
+  }
+}
