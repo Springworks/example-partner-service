@@ -4,6 +4,7 @@
   "scripts": {
     "lint": "tslint --project tsconfig.json --format stylish",
     "fix": "tslint --project tsconfig.json --format stylish --fix",
+    "prestart": "yarn build",
     "start": "node ./build/main.js",
     "test": "jest",
     "build": "tsc",
