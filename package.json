@@ -8,8 +8,8 @@
     "start": "node ./build/main.js",
     "test": "jest",
     "build": "tsc",
-    "prebuild": "del build",
-    "postbuild": "del 'build/**/__*__/'"
+    "prebuild": "del build/* -f",
+    "postbuild": "del 'build/**/__*__/' && cp package.json build/ && cp README.md build/"
   },
   "dependencies": {
     "@springworks/spark-oidc-client": "^1.3.0",
