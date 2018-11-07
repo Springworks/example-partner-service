@@ -12,7 +12,7 @@
     "postbuild": "del 'build/**/__*__/' && cp package.json build/ && cp README.md build/"
   },
   "dependencies": {
-    "@springworks/spark-oidc-client": "^1.3.0",
+    "@springworks/spark-partner-service-client": "^1.7.0",
     "boom": "^7.2.0",
     "hapi": "^17.6.0",
     "joi": "^14.0.0",

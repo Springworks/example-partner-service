@@ -1,4 +1,4 @@
-import { SessionManager } from '@springworks/spark-oidc-client';
+import { SessionManager } from '@springworks/spark-partner-service-client';
 import { Request, ResponseToolkit } from 'hapi';
 
 export const SESSION_COOKIE_NAME = 'spark_session';
