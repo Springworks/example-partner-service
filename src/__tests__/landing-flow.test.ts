@@ -1,10 +1,9 @@
-import { SparkOidcClient } from '@springworks/spark-oidc-client';
+import { SparkPartnerServiceClient } from '@springworks/spark-partner-service-client';
 import { Server } from 'hapi';
+import { jar, Response } from 'request';
 import { anyString, anything, instance, mock, reset, when } from 'ts-mockito';
 import { makeRequest } from '../request-helper';
 import { createServer } from '../service-provider';
-
-import { jar, Response } from 'request';
 
 async function landingRequest(server_url: string): Promise<Response> {
   return makeRequest({
@@ -15,11 +14,11 @@ async function landingRequest(server_url: string): Promise<Response> {
 }
 
 describe('test/routes/landing-flow-test.js', () => {
-  let spark_client: SparkOidcClient;
+  let spark_client: SparkPartnerServiceClient;
   let server: Server;
 
   beforeAll(async () => {
-    spark_client = mock(SparkOidcClient);
+    spark_client = mock(SparkPartnerServiceClient);
 
     server = await createServer(0, instance(spark_client));
     await server.start();

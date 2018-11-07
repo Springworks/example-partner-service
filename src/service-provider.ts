@@ -1,4 +1,4 @@
-import { SparkOidcClient } from '@springworks/spark-oidc-client';
+import { SparkPartnerServiceClient } from '@springworks/spark-partner-service-client';
 import { Request, RequestQuery, ResponseToolkit, Server } from 'hapi';
 import joi = require('joi');
 import { getVin } from './data-provider';
@@ -6,7 +6,7 @@ import { HapiSessionManager, SESSION_COOKIE_NAME } from './session-manager';
 
 const default_port = 3000;
 
-const default_client = new SparkOidcClient({
+const default_client = new SparkPartnerServiceClient({
   client_id: 'some-spark_client-id',
   client_secret: 'some-spark_client-secret-that-needs-to-be-sufficiently-long',
   callback_url: 'http://localhost:3000/auth',
@@ -14,7 +14,7 @@ const default_client = new SparkOidcClient({
 
 export async function createServer(
   port: number = default_port,
-  spark_client: SparkOidcClient = default_client,
+  spark_client: SparkPartnerServiceClient = default_client,
 ): Promise<Server> {
   const server = new Server({
     host: '0.0.0.0',
@@ -35,7 +35,7 @@ export async function createServer(
   return server;
 }
 
-async function configureRouting(server: Server, spark_client: SparkOidcClient): Promise<void> {
+async function configureRouting(server: Server, spark_client: SparkPartnerServiceClient): Promise<void> {
   server.route([
     {
       method: 'GET',
