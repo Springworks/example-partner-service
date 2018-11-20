@@ -1,4 +1,5 @@
 import { SparkPartnerServiceClient } from '@springworks/spark-partner-service-client';
+import * as handlebars from 'handlebars';
 import { Request, RequestQuery, ResponseToolkit, Server } from 'hapi';
 import joi = require('joi');
 import { HapiSessionManager, SESSION_COOKIE_NAME } from './session-manager';
@@ -35,6 +36,14 @@ export async function createServer(
 }
 
 async function configureRouting(server: Server, spark_client: SparkPartnerServiceClient): Promise<void> {
+  await server.register(require('vision'));
+
+  server.views({
+    engines: { html: handlebars },
+    relativeTo: __dirname,
+    path: './templates',
+  });
+
   server.route([
     {
       method: 'GET',
@@ -47,7 +56,7 @@ async function configureRouting(server: Server, spark_client: SparkPartnerServic
           return h.redirect('/login');
         }
 
-        return `Hello an authenticated user!`;
+        return h.view('landing-page');
       },
     },
     {

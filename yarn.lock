@@ -52,9 +52,15 @@
   dependencies:
     "@types/node" "*"
 
-"@types/hapi@^17.6.1":
-  version "17.6.2"
-  resolved "https://registry.yarnpkg.com/@types/hapi/-/hapi-17.6.2.tgz#9de9e98f508975a1e4c04ee7e58b6aae565453c9"
+"@types/handlebars@^4.0.39":
+  version "4.0.39"
+  resolved "https://registry.yarnpkg.com/@types/handlebars/-/handlebars-4.0.39.tgz#961fb54db68030890942e6aeffe9f93a957807bd"
+  integrity sha512-vjaS7Q0dVqFp85QhyPSZqDKnTTCemcSHNHFvDdalO1s0Ifz5KuE64jQD5xoUkfdWwF4WpqdJEl7LsWH8rzhKJA==
+
+"@types/hapi@*", "@types/hapi@^17.0.14":
+  version "17.6.3"
+  resolved "https://registry.yarnpkg.com/@types/hapi/-/hapi-17.6.3.tgz#f1121d5b1e4730cba38b3d423cbb78f2b9959ece"
+  integrity sha512-A2kpZ0GzCl+Kpp4pSjZYZRHLPLJx/eaiwdT20zANm+zwjOs/lneTW+EWhvJPdVc6YIQr0Is08TMeyevLBoWCCw==
   dependencies:
     "@types/boom" "*"
     "@types/catbox" "*"
@@ -115,6 +121,13 @@
 "@types/tough-cookie@*":
   version "2.3.3"
   resolved "https://registry.yarnpkg.com/@types/tough-cookie/-/tough-cookie-2.3.3.tgz#7f226d67d654ec9070e755f46daebf014628e9d9"
+
+"@types/vision@^5.3.5":
+  version "5.3.5"
+  resolved "https://registry.yarnpkg.com/@types/vision/-/vision-5.3.5.tgz#10cd8a155f58d6ceb65c8b889b5aca8ca80ea57b"
+  integrity sha512-CbGBNPBUSjyLW1bsC42mgvDffGtkHXzKIB69hGgCGwkoE90YS5DH1N8E4v+LXf/0LDepj/oc0IT3IDdnTQOOGQ==
+  dependencies:
+    "@types/hapi" "*"
 
 abab@^2.0.0:
   version "2.0.0"
@@ -1411,9 +1424,10 @@ growly@^1.3.0:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/growly/-/growly-1.3.0.tgz#f10748cbe76af964b7c96c93c6bcc28af120c081"
 
-handlebars@^4.0.3:
+handlebars@^4.0.12, handlebars@^4.0.3:
   version "4.0.12"
   resolved "https://registry.yarnpkg.com/handlebars/-/handlebars-4.0.12.tgz#2c15c8a96d46da5e266700518ba8cb8d919d5bc5"
+  integrity sha512-RhmTekP+FZL+XNhwS1Wf+bTTZpdLougwt5pcgA1tuz6Jcx0fpH/7z0qd71RKnZHBCxIRBHfBOnio4gViPemNzA==
   dependencies:
     async "^2.5.0"
     optimist "^0.6.1"
@@ -1975,6 +1989,11 @@ isurl@^1.0.0-alpha5:
     has-to-string-tag-x "^1.2.0"
     is-object "^1.0.1"
 
+items@2.x.x:
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/items/-/items-2.1.2.tgz#0849354595805d586dac98e7e6e85556ea838558"
+  integrity sha512-kezcEqgB97BGeZZYtX/MA8AG410ptURstvnz5RAgyFZ8wQFPMxHY8GpTq+/ZHKT3frSlIthUq7EvLt9xn3TvXg==
+
 jest-changed-files@^23.4.2:
   version "23.4.2"
   resolved "https://registry.yarnpkg.com/jest-changed-files/-/jest-changed-files-23.4.2.tgz#1eed688370cd5eebafe4ae93d34bb3b64968fe83"
@@ -2274,6 +2293,15 @@ joi@13.x.x:
   resolved "https://registry.yarnpkg.com/joi/-/joi-13.7.0.tgz#cfd85ebfe67e8a1900432400b4d03bbd93fb879f"
   dependencies:
     hoek "5.x.x"
+    isemail "3.x.x"
+    topo "3.x.x"
+
+joi@14.x.x:
+  version "14.1.0"
+  resolved "https://registry.yarnpkg.com/joi/-/joi-14.1.0.tgz#98a7923108a9f361192551b29f538488d07953cc"
+  integrity sha512-oJDBwllD6VjSMquuv56W0fQlegJdsr8+905zuEQhnE/eTSh5GYUHlwn/UATnlDepuXZF8BnxggdxqQTYrtit6Q==
+  dependencies:
+    hoek "6.x.x"
     isemail "3.x.x"
     topo "3.x.x"
 
@@ -4062,6 +4090,16 @@ vise@3.x.x:
   resolved "https://registry.yarnpkg.com/vise/-/vise-3.0.0.tgz#76ad14ab31669c50fbb0817bc0e72fedcbb3bf4c"
   dependencies:
     hoek "5.x.x"
+
+vision@^5.4.3:
+  version "5.4.3"
+  resolved "https://registry.yarnpkg.com/vision/-/vision-5.4.3.tgz#648663667f22dc6da17a00c049c2c1a97366d72f"
+  integrity sha512-4uVrdAKSjNF3WVf1Mjq//SfMclUgpHJtk0EBESyLFcZmrqJjUQ08DyCsRYqw31qEFK3bVm8UO9BlfodRwuyETg==
+  dependencies:
+    boom "7.x.x"
+    hoek "6.x.x"
+    items "2.x.x"
+    joi "14.x.x"
 
 w3c-hr-time@^1.0.1:
   version "1.0.1"
