@@ -56,7 +56,7 @@ async function configureRouting(server: Server, spark_client: SparkPartnerServic
           return h.redirect('/login');
         }
 
-        return h.view('landing-page');
+        return h.view('landing-page', { subject: await spark_client.currentSubject(session_manager) });
       },
     },
     {
