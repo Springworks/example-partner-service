@@ -1,7 +1,6 @@
 import { SparkPartnerServiceClient } from '@springworks/spark-partner-service-client';
 import { Request, RequestQuery, ResponseToolkit, Server } from 'hapi';
 import joi = require('joi');
-import { getVin } from './data-provider';
 import { HapiSessionManager, SESSION_COOKIE_NAME } from './session-manager';
 
 const default_port = 3000;
@@ -48,10 +47,7 @@ async function configureRouting(server: Server, spark_client: SparkPartnerServic
           return h.redirect('/login');
         }
 
-        // Get some data from Service Provider Gateway
-        const vin = await getVin(await spark_client.authorizationHeader(session_manager));
-
-        return `Hello an authenticated user! Your vin is ${vin}`;
+        return `Hello an authenticated user!`;
       },
     },
     {

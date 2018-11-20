@@ -33,12 +33,6 @@ describe('test/routes/landing-flow-test.js', () => {
   });
 
   describe(`GET /landing`, () => {
-    beforeEach(() => {
-      jest.mock('../data-provider', () => ({
-        getVin: jest.fn(() => 'vin'),
-      }));
-    });
-
     describe('when request is authenticated', () => {
       let result: any;
 
