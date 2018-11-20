@@ -33,12 +33,6 @@ describe('test/routes/landing-flow-test.js', () => {
   });
 
   describe(`GET /landing`, () => {
-    beforeEach(() => {
-      jest.mock('../data-provider', () => ({
-        getVin: jest.fn(() => 'vin'),
-      }));
-    });
-
     describe('when request is authenticated', () => {
       let result: any;
 
@@ -56,7 +50,7 @@ describe('test/routes/landing-flow-test.js', () => {
       });
 
       it('should return hello user message', async () => {
-        expect(result.body).toContain('Hello an authenticated user');
+        expect(result.body).toContain('Do you like our service?');
       });
 
       it('should not be redirected', async () => {
@@ -95,7 +89,7 @@ describe('test/routes/landing-flow-test.js', () => {
       });
 
       it('should return hello user message', async () => {
-        expect(result.body).toContain('Hello an authenticated user');
+        expect(result.body).toContain('Do you like our service?');
       });
 
       it(`should be redirected from '/auth'`, async () => {
