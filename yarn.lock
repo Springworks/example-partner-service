@@ -20,9 +20,10 @@
   version "0.7.0"
   resolved "https://registry.yarnpkg.com/@sindresorhus/is/-/is-0.7.0.tgz#9a06f4f137ee84d7df0460c1fdb1135ffa6c50fd"
 
-"@springworks/spark-partner-service-client@^1.7.0":
-  version "1.7.0"
-  resolved "https://registry.yarnpkg.com/@springworks/spark-partner-service-client/-/spark-partner-service-client-1.7.0.tgz#a206ffba57bdd86d7e3d0ae38fbb0f5a0e7ba8be"
+"@springworks/spark-partner-service-client@^1.8.0":
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/@springworks/spark-partner-service-client/-/spark-partner-service-client-1.8.0.tgz#8f1f295515efe2c8f48c38664c03f066c261112a"
+  integrity sha512-nHGyR67R2av/DaQhrlbwIKmRGL/feEN1SFwZbdWqawk7abC6gOspEWR7b2ro1RmZ7eRjrtutbnDDWp9NdEuyHA==
   dependencies:
     iron "^5.0.4"
     openid-client "^2.4.2"
@@ -95,9 +96,14 @@
   dependencies:
     "@types/mime-db" "*"
 
-"@types/node@*", "@types/node@^10.12.0":
+"@types/node@*":
   version "10.12.1"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-10.12.1.tgz#da61b64a2930a80fa708e57c45cd5441eb379d5b"
+
+"@types/node@^12":
+  version "12.12.25"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-12.12.25.tgz#792c0afb798f1dd681dce9c4b4c431f7245a0a42"
+  integrity sha512-nf1LMGZvgFX186geVZR1xMZKKblJiRfiASTHw85zED2kI1yDKHDwTKMdkaCbTlXoRKlGKaDfYywt+V0As30q3w==
 
 "@types/podium@*":
   version "1.0.0"
