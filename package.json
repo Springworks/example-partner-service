@@ -14,7 +14,7 @@
   "dependencies": {
     "@springworks/spark-partner-service-client": "^1.8.0",
     "boom": "^7.2.0",
-    "handlebars": "^4.0.12",
+    "handlebars": "^4.3.0",
     "hapi": "^17.6.0",
     "joi": "^14.0.0",
     "request": "^2.88.0",
