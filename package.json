@@ -14,7 +14,7 @@
   "dependencies": {
     "@springworks/spark-partner-service-client": "^1.8.0",
     "boom": "^7.2.0",
-    "handlebars": "^4.0.12",
+    "handlebars": "^4.7.6",
     "hapi": "^17.6.0",
     "joi": "^14.0.0",
     "request": "^2.88.0",
@@ -22,7 +22,6 @@
   },
   "devDependencies": {
     "@springworks/tslint-config": "^2.0.0",
-    "@types/handlebars": "^4.0.39",
     "@types/hapi": "^17.0.14",
     "@types/jest": "^23.3.9",
     "@types/node": "^12",
